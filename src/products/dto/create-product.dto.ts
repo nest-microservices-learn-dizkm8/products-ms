@@ -1,4 +1,3 @@
-import { Type } from 'class-transformer';
 import { IsNumber, IsPositive, IsString } from 'class-validator';
 
 export class CreateProductDto {
@@ -9,6 +8,5 @@ export class CreateProductDto {
     maxDecimalPlaces: 4,
   })
   @IsPositive()
-  @Type(() => Number)
-  public price: string;
+  public price: number;
 }
